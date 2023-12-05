@@ -22,7 +22,7 @@ class KavehHueSlider(context: Context, attributeSet: AttributeSet?) :
         resources,
         R.drawable.full_hue_bitmap,
         BitmapFactory.Options().apply {
-            inScaled = false
+            inScaled = true
         })
 
     private val hueMatrix = Matrix()
