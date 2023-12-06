@@ -50,7 +50,7 @@ abstract class KavehColorSlider(context: Context, attributeSet: AttributeSet?) :
 
     private var isWrapContent = false
 
-    var lineStrokeCap = Paint.Cap.ROUND
+    var lineStrokeCap = Paint.Cap.SQUARE
         set(value) {
             field = value
             linePaint.strokeCap = field

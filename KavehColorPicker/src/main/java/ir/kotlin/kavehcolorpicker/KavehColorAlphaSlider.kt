@@ -1,5 +1,4 @@
 package ir.kotlin.kavehcolorpicker
-
 import android.content.Context
 import android.graphics.Color
 import android.graphics.LinearGradient
@@ -28,7 +27,6 @@ class KavehColorAlphaSlider(context: Context, attributeSet: AttributeSet?) :
 
     val alphaValue: Float
         get() = currentAlpha
-
 
     private var onAlphaChanged: ((alpha: Float) -> Unit)? = null
     private var onAlphaChangedListener: OnAlphaChangedListener? = null

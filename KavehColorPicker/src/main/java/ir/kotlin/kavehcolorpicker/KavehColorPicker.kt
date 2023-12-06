@@ -13,7 +13,6 @@ class KavehColorPicker(context: Context, attributeSet: AttributeSet?) :
     KavehColorSlider(context, attributeSet) {
 
     constructor(context: Context) : this(context, null)
-
     private lateinit var colorShader: LinearGradient
     private lateinit var darknessShader: LinearGradient
 
@@ -27,13 +26,9 @@ class KavehColorPicker(context: Context, attributeSet: AttributeSet?) :
             if (value < 0f || value > 360f) {
                 throw IllegalStateException("hue value should be between 0 and 360")
             }
-
             field = value
-
             initializeSliderPaint()
-
             calculateColor(circleX, circleY)
-
             invalidate()
         }
 
