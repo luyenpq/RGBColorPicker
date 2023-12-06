@@ -8,6 +8,7 @@ import android.util.AttributeSet
 import kotlin.math.max
 import kotlin.math.min
 
+
 class KavehColorPicker(context: Context, attributeSet: AttributeSet?) :
     KavehColorSlider(context, attributeSet) {
 
@@ -194,11 +195,11 @@ class KavehColorPicker(context: Context, attributeSet: AttributeSet?) :
         if (canvas == null) {
             return
         }
-        canvas.drawRect(drawingStart, drawingTop, widthF, heightF, linePaint.apply {
+        canvas.drawRoundRect(RectF(drawingStart, drawingTop, widthF, heightF),6,6, linePaint.apply {
             shader = colorShader
         })
-
-        canvas.drawRect(drawingStart, drawingTop, widthF, heightF, linePaint.apply {
+        canvas.drawRoundRect()
+        canvas.drawRoundRect(RectF(drawingStart, drawingTop, widthF, heightF),6,6, linePaint.apply {
             shader = darknessShader
         })
 

@@ -19,7 +19,7 @@ abstract class KavehColorSlider(context: Context, attributeSet: AttributeSet?) :
 
     protected val linePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.STROKE
-        strokeCap = Paint.Cap.ROUND
+        strokeCap = Paint.Cap.SQUARE
     }
 
     protected val circlePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
@@ -77,7 +77,7 @@ abstract class KavehColorSlider(context: Context, attributeSet: AttributeSet?) :
             try {
                 lineStrokeCap = Paint.Cap.values()[getInt(
                     R.styleable.MananSlider_sliderBarStrokeCap,
-                    Paint.Cap.ROUND.ordinal
+                    Paint.Cap.SQUARE.ordinal
                 )]
 
                 strokeSize = getDimension(R.styleable.MananSlider_sliderStrokeSize, strokeSize)
